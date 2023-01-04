@@ -92,14 +92,14 @@ form {
   opacity: 0.2;
 }
 
-.new-create {
+.new-list {
   font-size: 1.1rem;
 }
 
-.active-create {
+.active-list {
   font-weight: 700;
 }
 
-.todo-create {
+.todo-list {
   grid-area: active;
 }
