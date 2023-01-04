@@ -23,18 +23,83 @@ body {
   display: grid;
   grid:
     "header header header header " auto
-    "...... lists  active ...... " auto/
+    "...... creates  active ...... " auto/
     1fr minmax(100px, 300px) minmax(250px, 500px) 1fr;
 }
 
 .title {
   grid-area: header;
+  text-align: center;
+  font-size: calc(7vw + 2rem);
+  font-weight: 900;
+  color: rgba(0, 0, 0, 0.1);
+  letter-spacing: 2px;
+  margin: -0.3em 0 0.5em;
 }
 
 .all-tasks {
-  grid-area: lists;
+  grid-area: creates;
 }
 
-.todo-list {
+.task-create {
+  line-height: 1.7;
+  font-size: 1.2rem;
+  list-style: circle;
+  padding-left: 1.1em;
+}
+
+form {
+  display: flex;
+}
+
+.btn {
+  cursor: pointer;
+  background: 0;
+  border: 0;
+  padding: 0;
+  color: inherit;
+  font-size: 1rem;
+}
+
+.btn.create {
+  font-size: 1.5rem;
+  font-weight: 900;
+  margin-right: 0.25em;
+}
+
+.btn.create:hover {
+  opacity: 0.7;
+  transform: opacity 250ms ease-in;
+}
+
+.new {
+  background: transparent;
+  border: 0;
+  color: inherit;
+  border-bottom: 1px solid currentColor;
+  font-size: inherit;
+  outline: none;
+
+  transition: border-bottom 150ms ease-in;
+  order: 2;
+}
+
+.new:focus {
+  border-bottom-width: 3px;
+}
+
+.new:focus::placeholder {
+  opacity: 0.2;
+}
+
+.new-create {
+  font-size: 1.1rem;
+}
+
+.active-create {
+  font-weight: 700;
+}
+
+.todo-create {
   grid-area: active;
 }
